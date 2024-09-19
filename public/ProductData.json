@@ -1,0 +1,135 @@
+[
+    {
+        "id": 1,
+        "name": "Cooling Tower",
+        "image": "cooling.jpg",
+        "description": "Our product range includes a wide range of Pp Frp Nutch Filter 2kl, FRP Tanks, FRP Fuel Storage Tank, FRP Tank, Pp Frp Scrubber System and Pp Frp Tank 15kl.",
+        "category": "FRP Tank"
+    },
+    {
+        "id": 2,
+        "name": "HDPE Tank",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Durable HDPE tanks used for chemical storage, available in multiple sizes.",
+        "category": "Cooling Tower"
+    },
+    {
+        "id": 3,
+        "name": "FRP Tank",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Corrosion-resistant FRP tanks for industrial and chemical applications.",
+        "category": "Cooling Tower"
+    },
+    {
+        "id": 4,
+        "name": "Blower Wheel",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Precision-engineered blower wheels for optimal air circulation in HVAC systems.",
+        "category": "Cooling Tower"
+    },
+    {
+        "id": 5,
+        "name": "Cooling Tower",
+        "image": "cooling.jpg",
+        "description": "High-efficiency cooling towers designed to optimize heat dissipation in industrial processes.",
+        "category": "FRP Tank"
+    },
+    {
+        "id": 6,
+        "name": "HDPE Tank",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Durable HDPE tanks used for chemical storage, available in multiple sizes.",
+        "category": "FRP Tank"
+    },
+    {
+        "id": 7,
+        "name": "FRP Tank",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Corrosion-resistant FRP tanks for industrial and chemical applications.",
+        "category": "FRP Tank"
+    },
+    {
+        "id": 8,
+        "name": "Blower Wheel",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Precision-engineered blower wheels for optimal air circulation in HVAC systems.",
+        "category": "FRP Tank"
+    },
+    {
+        "id": 9,
+        "name": "Cooling Tower",
+        "image": "./assets/images/cooling.jpg",
+        "description": "High-efficiency cooling towers designed to optimize heat dissipation in industrial processes.",
+        "category": "Spiral HDPE Storage Tanks"
+    },
+    {
+        "id": 10,
+        "name": "HDPE Tank",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Durable HDPE tanks used for chemical storage, available in multiple sizes.",
+        "category": "Spiral HDPE Storage Tanks"
+    },
+    {
+        "id": 11,
+        "name": "FRP Tank",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Corrosion-resistant FRP tanks for industrial and chemical applications.",
+        "category": "Spiral HDPE Storage Tanks"
+    },
+    {
+        "id": 12,
+        "name": "Blower Wheel",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Precision-engineered blower wheels for optimal air circulation in HVAC systems.",
+        "category": "FRP Products"
+    },
+    {
+        "id": 13,
+        "name": "Cooling Tower",
+        "image": "./assets/images/cooling.jpg",
+        "description": "High-efficiency cooling towers designed to optimize heat dissipation in industrial processes.",
+        "category": "FRP Products"
+    },
+    {
+        "id": 14,
+        "name": "HDPE Tank",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Durable HDPE tanks used for chemical storage, available in multiple sizes.",
+        "category": "FRP Products"
+    },
+    {
+        "id": 15,
+        "name": "FRP Tank",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Corrosion-resistant FRP tanks for industrial and chemical applications.",
+        "category": "FRP Products"
+    },
+    {
+        "id": 16,
+        "name": "Blower Wheel",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Precision-engineered blower wheels for optimal air circulation in HVAC systems.",
+        "category": "FRP Products"
+    },
+    {
+        "id": 17,
+        "name": "Blower Wheel",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Precision-engineered blower wheels for optimal air circulation in HVAC systems.",
+        "category": "HDPE Tank"
+    },
+    {
+        "id": 18,
+        "name": "Blower Wheel",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Precision-engineered blower wheels for optimal air circulation in HVAC systems.",
+        "category": "Roofing Sheet"
+    },
+    {
+        "id": 19,
+        "name": "Blower Wheel",
+        "image": "./assets/images/cooling.jpg",
+        "description": "Precision-engineered blower wheels for optimal air circulation in HVAC systems.",
+        "category": "Roofing Sheet"
+    }
+]
