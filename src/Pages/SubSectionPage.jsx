@@ -1,62 +1,745 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
+const allProducts = [
+  {
+    id: 1,
+    title: "Product 1",
+    image: "/path-to-product1.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 1",
+  },
+  {
+    id: 2,
+    title: "Product 2",
+    image: "/path-to-product2.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 2",
+  },
+  {
+    id: 3,
+    title: "Product 3",
+    image: "/path-to-product3.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 3",
+  },
+  {
+    id: 4,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 5,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 6,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 7,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 8,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 9,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 10,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 11,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 12,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 13,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 14,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 15,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 16,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 17,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 18,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 19,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 20,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 21,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 22,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 23,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 24,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 25,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 26,
+    title: "Product 1",
+    image: "/path-to-product1.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 1",
+  },
+  {
+    id: 27,
+    title: "Product 2",
+    image: "/path-to-product2.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 2",
+  },
+  {
+    id: 28,
+    title: "Product 3",
+    image: "/path-to-product3.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 3",
+  },
+  {
+    id: 29,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 30,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 31,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 32,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 33,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 34,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 35,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 36,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 37,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 38,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 39,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 40,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "1",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 41,
+    title: "Product 5",
+    image: "/path-to-product5.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 5",
+  },
+  {
+    id: 42,
+    title: "Product 6",
+    image: "/path-to-product6.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 6",
+  },
+  {
+    id: 43,
+    title: "Product 7",
+    image: "/path-to-product7.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 7",
+  },
+  {
+    id: 44,
+    title: "Product 8",
+    image: "/path-to-product8.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 8",
+  },
+  {
+    id: 45,
+    title: "Product 9",
+    image: "/path-to-product9.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 9",
+  },
+  {
+    id: 46,
+    title: "Product 10",
+    image: "/path-to-product10.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 10",
+  },
+  {
+    id: 47,
+    title: "Product 11",
+    image: "/path-to-product11.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 11",
+  },
+  {
+    id: 48,
+    title: "Product 12",
+    image: "/path-to-product12.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 12",
+  },
+  {
+    id: 49,
+    title: "Product 13",
+    image: "/path-to-product13.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 13",
+  },
+  {
+    id: 50,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 14",
+  },
+  {
+    id: 51,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "2",
+    description: "Description of Product 14",
+  },
+
+  {
+    id: 52,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "3",
+    description: "Description of Product 14",
+  },
+  {
+    id: 53,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "3",
+    description: "Description of Product 14",
+  },
+  {
+    id: 54,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "3",
+    description: "Description of Product 14",
+  },
+  {
+    id: 55,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "3",
+    description: "Description of Product 14",
+  },
+
+  {
+    id: 56,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "4",
+    description: "Description of Product 14",
+  },
+  {
+    id: 57,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "4",
+    description: "Description of Product 14",
+  },
+  {
+    id: 58,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "4",
+    description: "Description of Product 14",
+  },
+
+  {
+    id: 59,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "5",
+    description: "Description of Product 14",
+  },
+  {
+    id: 60,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "5",
+    description: "Description of Product 14",
+  },
+  {
+    id: 61,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "6",
+    description: "Description of Product 14",
+  },
+
+  {
+    id: 62,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "6",
+    description: "Description of Product 14",
+  },
+  {
+    id: 63,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "6",
+    description: "Description of Product 14",
+  },
+  {
+    id: 64,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "6",
+    description: "Description of Product 14",
+  },
+  {
+    id: 65,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "7",
+    description: "Description of Product 14",
+  },
+
+  {
+    id: 66,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "7",
+    description: "Description of Product 14",
+  },
+  {
+    id: 67,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "7",
+    description: "Description of Product 14",
+  },
+  {
+    id: 68,
+    title: "Product 14",
+    image: "/path-to-product14.jpg",
+    categoryId: "1",
+    subSectionId: "7",
+    description: "Description of Product 14",
+  },
+  {
+    id: 69,
+    title: "Product 1",
+    image: "/path-to-product1.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 1",
+  },
+  {
+    id: 70,
+    title: "Product 1",
+    image: "/path-to-product1.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 1",
+  },
+  {
+    id: 71,
+    title: "Product 2",
+    image: "/path-to-product2.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 2",
+  },
+  {
+    id: 72,
+    title: "Product 3",
+    image: "/path-to-product3.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 3",
+  },
+  {
+    id: 73,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 74,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 75,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 76,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 77,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 78,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 79,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "1",
+    description: "Description of Product 4",
+  },
+  {
+    id: 80,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "2",
+    description: "Description of Product 4",
+  },
+  {
+    id: 81,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "2",
+    description: "Description of Product 4",
+  },
+  {
+    id: 82,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "3",
+    description: "Description of Product 4",
+  },
+  {
+    id: 83,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "4",
+    description: "Description of Product 4",
+  },
+  {
+    id: 84,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "4",
+    description: "Description of Product 4",
+  },
+  {
+    id: 85,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "5",
+    description: "Description of Product 4",
+  },
+  {
+    id: 86,
+    title: "Product 4",
+    image: "/path-to-product4.jpg",
+    categoryId: "2",
+    subSectionId: "6",
+    description: "Description of Product 4",
+  },
+  
+];
+
 const SubSectionPage = () => {
   const { categoryId, subSectionId } = useParams();
   const navigate = useNavigate();
 
-  // Array of products (This can be fetched from API later)
-  const products = [
-    {
-      id: 1,
-      title: "Product 1",
-      image: "/path-to-product1.jpg",
-      description: "Description of Product 1",
-      price: "$100",
-    },
-    {
-      id: 2,
-      title: "Product 2",
-      image: "/path-to-product2.jpg",
-      description: "Description of Product 2",
-      price: "$200",
-    },
-    {
-      id: 3,
-      title: "Product 3",
-      image: "/path-to-product3.jpg",
-      description: "Description of Product 3",
-      price: "$300",
-    },
-  ];
+  // Filter products based on categoryId and subSectionId
+  const filteredProducts = allProducts.filter(
+    (product) =>
+      product.categoryId === categoryId && product.subSectionId === subSectionId
+  );
 
   const handleViewDetails = (productId) => {
-    // Navigate to the product details page
-    navigate(`/category/${categoryId}/subsection/${subSectionId}/product/${productId}`);
+    navigate(
+      `/category/${categoryId}/subsection/${subSectionId}/product/${productId}`
+    );
   };
 
   return (
     <div className="bg-white min-h-screen">
-      <h1 className="text-2xl font-bold text-center my-4">
-        Products in Subsection {subSectionId}
-      </h1>
+      <h1 className="text-2xl font-bold text-center my-4">All Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
-        {products.map((product) => (
-          <div key={product.id} className="bg-white shadow-lg rounded-lg p-4">
-            <img
-              src={product.image}
-              alt={product.title}
-              className="w-full h-40 object-cover rounded-md"
-            />
-            <h2 className="text-xl font-semibold mt-2">{product.title}</h2>
-            <button
-              className="bg-blue-700 text-white rounded-lg p-2 mt-4"
-              onClick={() => handleViewDetails(product.id)}
-            >
-              View Details
-            </button>
-          </div>
-        ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <div key={product.id} className="bg-white shadow-lg rounded-lg p-4">
+              <img
+                src={product.image}
+                alt={product.title}
+                className="w-full h-40 object-cover rounded-md"
+              />
+              <h2 className="text-xl font-semibold mt-2">{product.title}</h2>
+              <button
+                className="bg-blue-700 text-white rounded-lg p-2 mt-4"
+                onClick={() => handleViewDetails(product.id)}
+              >
+                View Details
+              </button>
+            </div>
+          ))
+        ) : (
+          <p className="text-center text-gray-500">
+            No products found for this subsection.
+          </p>
+        )}
       </div>
     </div>
   );

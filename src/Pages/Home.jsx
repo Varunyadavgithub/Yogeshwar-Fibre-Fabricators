@@ -4,10 +4,10 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ProductSlider from "../Components/ProductSlider";
 import Carousel_01 from "../assets/images/carousel_01.png";
-import Carousel_02 from "../assets/images/carousel_02.png";
-import Carousel_03 from "../assets/images/carousel_03.png";
-import Carousel_04 from "../assets/images/carousel_04.png";
-import Carousel_05 from "../assets/images/carousel_05.png";
+import Carousel_02 from "../assets/images/carousel_02.webp";
+import Carousel_03 from "../assets/images/carousel_03.jpg";
+import Carousel_04 from "../assets/images/carousel_04.webp";
+import Carousel_05 from "../assets/images/carousel_05.webp";
 import Manufacturing from "../assets/images/manufacturing.jpg";
 import Wholesale from "../assets/images/wholesale.webp";
 import Consultation from "../assets/images/Consultation.avif";
@@ -189,9 +189,7 @@ const Home = () => {
       {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Our Services
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-4 shadow-lg hover:shadow-xl transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <img src={Manufacturing} alt="manufacturing" />
@@ -226,7 +224,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-200">
+      {/* <section className="py-16 bg-gray-200">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8">
             What Our Clients Say
@@ -245,6 +243,78 @@ const Home = () => {
                 Great quality and support."
               </p>
               <h4 className="font-semibold">- Meera Patel</h4>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <section class="bg-gray-100 py-16 px-12">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-800 mb-12">
+            What Our Clients Say
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* <!-- Testimonial 1 --> */}
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <p class="text-gray-600 mb-4">
+                "Yogeshwar Fibre Fabricators delivered top-notch fiber products
+                for our industrial project. Their attention to detail and
+                professionalism exceeded our expectations."
+              </p>
+              <div class="flex items-center justify-center mt-4">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://via.placeholder.com/150"
+                  alt="Client 1"
+                />
+                <div class="ml-4 text-left">
+                  <h3 class="text-lg font-semibold text-gray-800">
+                    Sun Pharma, Mumbai
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            {/* <!-- Testimonial 2 --> */}
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <p class="text-gray-600 mb-4">
+                "Their team provided exceptional customer service and
+                high-quality fiber fabrication that perfectly matched our
+                requirements. Highly recommended!"
+              </p>
+              <div class="flex items-center justify-center mt-4">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://via.placeholder.com/150"
+                  alt="Client 2"
+                />
+                <div class="ml-4 text-left">
+                  <h3 class="text-lg font-semibold text-gray-800">
+                    Cadila Pharma, Gujarat
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            {/* <!-- Testimonial 3 --> */}
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <p class="text-gray-600 mb-4">
+                "We were impressed with the efficiency and quality of Yogeshwar
+                Fibre Fabricators. They delivered ahead of schedule, and the
+                craftsmanship was outstanding."
+              </p>
+              <div class="flex items-center justify-center mt-4">
+                <img
+                  class="w-12 h-12 rounded-full"
+                  src="https://via.placeholder.com/150"
+                  alt="Client 3"
+                />
+                <div class="ml-4 text-left">
+                  <h3 class="text-lg font-semibold text-gray-800">
+                    Sajjan India Limited, Ankleshwar
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>

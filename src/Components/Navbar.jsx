@@ -184,7 +184,7 @@ const Navbar = () => {
 
               <li>
                 <Link
-                to="/product"
+                to="/products"
                   onClick={() => {
                     scrolleToTop();
                   }}
